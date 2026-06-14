@@ -1,94 +1,76 @@
-<!-- Hero -->
-# LeetCode SQL — Top 50 (MySQL solutions)
+# LeetCode SQL Top 50 — MySQL Solution Repository
 
-This is a studied, pragmatic collection of MySQL solutions for LeetCode's Top 50 SQL study plan. Each solution focuses on clarity, common interview patterns, and concise explanations so you can read, learn, and reuse quickly.
+This repository showcases a disciplined, interview-focused collection of MySQL solutions for LeetCode’s SQL Top 50 problems. It reflects practical SQL problem-solving, clean query design, and a strong understanding of core database concepts used in real analytics and engineering roles.
 
-Current progress: **40 / 50 solved (80%)** — see the `Leetcode_<ID>/` folders for each solution.
+## Why this project stands out
 
----
+This project is more than a folder of SQL answers. It demonstrates:
 
-**Why this repo exists**
+- Strong SQL fundamentals: joins, aggregations, filtering, subqueries, window functions, and date logic
+- Structured problem solving: each solution is written to be readable, reusable, and easy to review
+- Interview readiness: the repository focuses on patterns commonly tested in data analyst, data engineer, and backend roles
+- Professional documentation habits: solutions are organized, named consistently, and easy to navigate
 
-- Learn patterns, not just problems: each solution highlights the technique (JOINs, window functions, CTEs, aggregation patterns, date arithmetic, etc.).
-- Fast study & paste-ready: queries are formatted for readability and easy copying into LeetCode's editor.
-- Practical explanations: short walkthroughs accompany select problems to explain the reasoning behind the query.
+## Project highlights
 
----
+- 50 curated SQL problem folders, each aligned to a LeetCode problem ID
+- Clean, copy-ready MySQL query solutions
+- Organized by problem topic and difficulty progression
+- Designed for fast revision, learning, and portfolio presentation
 
-## Who this is for
+## What this repository demonstrates
 
-- Engineers preparing for SQL interview questions.
-- Data analysts who want canonical query patterns.
-- Anyone learning SQL and looking for compact, explained solutions.
+This collection highlights the following technical skills:
 
----
+- Query writing and SQL syntax accuracy
+- Data transformation with SELECT, WHERE, GROUP BY, HAVING, and ORDER BY
+- Relational logic using INNER JOIN, LEFT JOIN, and self-joins
+- Advanced analytical thinking with CTEs, subqueries, and window functions
+- Business-style data interpretation and result filtering
 
-## What you'll find
+## Repository structure
 
-- One folder per LeetCode problem: `Leetcode_<ID>/` (for example `Leetcode_180/`).
-- One `.sql` file per folder, named descriptively (for example `Consecutive_Numbers.sql`).
-- Short explanatory notes in the `.sql` files when the approach benefits from a quick walkthrough.
+Each folder follows a simple, consistent layout:
 
----
+```text
+Leetcode_180/
+  Consecutive_Numbers.sql
+```
 
-## How to use
+This makes the repository easy to browse, review, and present during interviews or technical discussions.
 
-1. Find a problem by its ID (folders are named `Leetcode_<ID>`).
-2. Open the `.sql` file and review the query + comments.
-3. Copy the SELECT statement into LeetCode or run it locally in your MySQL client.
+## How to use this repository
 
-Run locally example:
+1. Open the folder matching the LeetCode problem number you want to study.
+2. Review the SQL query and its logic.
+3. Copy the solution into LeetCode or run it locally in your MySQL environment.
+
+Example:
 
 ```powershell
 mysql -u <user> -p <database> < Leetcode_180/Consecutive_Numbers.sql
 ```
 
-Note: Most LeetCode problems expect only a SELECT query; some files intentionally omit table DDL.
+## Skills showcased for recruiters
 
----
+This project is especially useful for demonstrating:
 
-## Sample walkthrough (concise)
+- Analytical thinking and problem decomposition
+- Ability to translate business requirements into SQL logic
+- Comfort with commonly used SQL patterns in interviews
+- Clean code organization and documentation discipline
+- Consistent learning and continuous improvement in data skills
 
-Problem: Consecutive Numbers (example)
+## Notes
 
-Goal: return numbers that appear at least three times consecutively.
+- Most files contain LeetCode-style SELECT queries.
+- Table schema is intentionally omitted because LeetCode provides the problem context during execution.
+- The repository is optimized for learning, revision, and professional presentation rather than just answer memorization.
 
-Approach: use self-joins or window functions to compare neighboring rows and filter sequences.
+## Summary
 
-```sql
-SELECT DISTINCT l1.num
-FROM Logs l1
-JOIN Logs l2 ON l2.id = l1.id + 1
-JOIN Logs l3 ON l3.id = l2.id + 1
-WHERE l1.num = l2.num
-	AND l2.num = l3.num;
-```
+This repository reflects a solid SQL practice portfolio and shows a candidate’s ability to think through data problems methodically. It is well-suited for showcasing SQL proficiency in interviews, GitHub portfolios, and technical discussions.
 
----
+## Progress
 
-## Progress & roadmap
-
-- Current: 40 / 50 problems completed and verified on LeetCode.
-- Next: finish the remaining top-50 problems, add more walkthroughs for medium/hard examples, and tag solutions by concept.
-
----
-
-## Contributing
-
-- Found a clearer solution or a better explanation? Please open a PR.
-- Follow the naming convention: `Leetcode_<ID>/<Descriptive_Name>.sql`.
-- Include a short comment or example input if your solution needs clarification.
-
-Small contribution checklist:
-
-- Add or update a single folder per problem.
-- Keep queries focused (LeetCode-style SELECT where appropriate).
-- Update `README.md` only if you add notable examples or change structure.
-
----
-
-## Contact
-
-Open issues or pull requests for corrections, suggestions, or to request an explanation for a specific problem.
-
-Made while learning and refining SQL — happy studying!
+Current status: 50 / 50 problem folders included in this repository.
